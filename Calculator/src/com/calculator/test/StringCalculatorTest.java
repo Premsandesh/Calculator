@@ -30,6 +30,9 @@ public class StringCalculatorTest {
 		assertEquals(6,StringCalculator.add("1,2,3"));
 	}
 	
-	
+	@Test
+	public void test_unknown_amount_of_numbers() {
+		assertEquals(26,StringCalculator.add("1,2,3,4,7,9"));
+	}
 
 }
