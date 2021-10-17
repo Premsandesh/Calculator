@@ -23,11 +23,16 @@ public class StringCalculator {
 	
 	private static int sum(String[] givenNumbers) {
 		int total=0;
-		
+		int negetiveCount=0;
+		String negetiveString="";
 		for(String number:givenNumbers) {
 			if(toInt(number)<0) {
-				
+				negetiveString=number;
+				negetiveCount++;
 			}
+			if(negetiveCount!=0)
+				throw new IllegalArgumentException("Negetive Not Allowed :"+ negetiveString);
+			
 				total+=toInt(number);
 		}
 		return total;	

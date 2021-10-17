@@ -44,5 +44,16 @@ public class StringCalculatorTest {
 	public void test_two_numbers_with_other_delimiter() {
 		assertEquals(3, StringCalculator.add("1;2"));
 	}
+	
+	@Test
+	public void test_negetive_number() {
+		
+		try {
+			StringCalculator.add("-1,2");
+		} catch (IllegalArgumentException e) {
+			assertEquals(e.getMessage(), "Negetive Not Allowed :-1");
+		}
+		
+	}
 
 }
