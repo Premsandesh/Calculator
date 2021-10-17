@@ -36,8 +36,11 @@ public class StringCalculator {
 				for(int i=0;i<negetiveCount;i++)
 				throw new IllegalArgumentException("Negetive Not Allowed :"+ negetiveString);
 			
+			if(toInt(number)>=1000)
+				continue;
 				total+=toInt(number);
 		}
+		
 		return total;	
 	}
 	

@@ -68,7 +68,12 @@ public class StringCalculatorTest {
 	}
 	
 	@Test
-	public void test_addmethodcalled_invoke_number() {
-		assertEquals(8, StringCalculator.getCalledCount());
+	public void test_timesmethod_invoke_number() {
+		assertEquals(9, StringCalculator.getCalledCount());
+	}
+	
+	@Test
+	public void test_TheLargeThanThousand_numbers() {
+		assertEquals(2,StringCalculator.add("2,1001"));
 	}
 }
