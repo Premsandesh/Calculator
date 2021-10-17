@@ -11,7 +11,7 @@ public class StringCalculator {
 				delimiter=Character.toString(numbers.charAt(2));
 				numbers=numbers.substring(4);
 			}
-			String numList[]=splitNumbers(numbers,delimiter+"|\n");
+			String numList[]=splitNumbers(numbers,delimiter+"|\n"+"|\n");
 			return sum(numList);
 		}
 	}
