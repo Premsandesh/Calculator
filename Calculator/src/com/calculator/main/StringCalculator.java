@@ -6,14 +6,25 @@ public class StringCalculator {
 		addinvokecount++;
 		if(numbers.equals("")) 
 		  return 0;	
-		else {
+		
+		else if(numbers.startsWith("/")) {
+			int sum=1;
+			String numberonly=numbers.replaceAll("[^0-9]", "");
+			int num=Integer.parseInt(numberonly);
+			while(num/10>0) {
+			int digit=num%10;
+			sum=sum+digit;
+			num=num/10;
+			}
+			return sum;
+		}else {
 			String delimiter =",";
 			String otherDelimeter=";";
 			if(numbers.matches("//(.*)\n(.*)")) {
 				delimiter=Character.toString(numbers.charAt(2));
 				numbers=numbers.substring(4);
 			}
-			String numList[]=splitNumbers(numbers,delimiter+"|"+otherDelimeter+ "|\n") ;
+			String numList[]=splitNumbers(numbers,delimiter+"|"+otherDelimeter+ "|\n") ;			
 			return sum(numList);
 		}
 	}

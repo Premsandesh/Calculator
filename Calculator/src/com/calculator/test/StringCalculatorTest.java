@@ -69,11 +69,17 @@ public class StringCalculatorTest {
 	
 	@Test
 	public void test_timesmethod_invoke_number() {
-		assertEquals(9, StringCalculator.getCalledCount());
+		assertEquals(11, StringCalculator.getCalledCount());
 	}
 	
 	@Test
 	public void test_TheLargeThanThousand_numbers() {
 		assertEquals(2,StringCalculator.add("2,1001"));
 	}
+	
+	@Test
+	public void test_totalofdelimiters_with_any_length() {
+		assertEquals(6,StringCalculator.add("//[***]\n1***2***3"));
+	}
+
 }
