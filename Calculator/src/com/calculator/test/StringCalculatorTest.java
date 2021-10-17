@@ -69,7 +69,7 @@ public class StringCalculatorTest {
 	
 	@Test
 	public void test_timesmethod_invoke_number() {
-		assertEquals(11, StringCalculator.getCalledCount());
+		assertEquals(12, StringCalculator.getCalledCount());
 	}
 	
 	@Test
@@ -85,6 +85,11 @@ public class StringCalculatorTest {
 	@Test
 	public void test_multiple_delimeters() {
 		assertEquals(6,StringCalculator.add("//[*][%]\n1*2%3"));
+	}
+	
+	@Test
+	public void test_multiple_delimeters_with_length_longer_than_char() {
+		assertEquals(6,StringCalculator.add("//[**][%%]\n1**2%%3"));
 	}
 	
 	
