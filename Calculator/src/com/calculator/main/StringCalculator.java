@@ -1,8 +1,9 @@
 package com.calculator.main;
 
 public class StringCalculator {
-
+	static int addinvokecount=0;
 	public static int add(String numbers) {
+		addinvokecount++;
 		if(numbers.equals("")) 
 		  return 0;	
 		else {
@@ -42,5 +43,9 @@ public class StringCalculator {
 	
 	private static int toInt(String n) {
 		return Integer.parseInt(n);
+	}
+	
+	public static int getCalledCount() {
+		return addinvokecount;
 	}
 }

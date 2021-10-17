@@ -66,5 +66,9 @@ public class StringCalculatorTest {
 		}
 		
 	}
-
+	
+	@Test
+	public void test_addmethodcalled_invoke_number() {
+		assertEquals(8, StringCalculator.getCalledCount());
+	}
 }
