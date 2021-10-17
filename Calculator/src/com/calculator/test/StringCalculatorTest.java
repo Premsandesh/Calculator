@@ -39,5 +39,10 @@ public class StringCalculatorTest {
 	public void test_newLine_numbers() {
 		assertEquals(6,StringCalculator.add("1\n2,3"));
 	}
+	
+	@Test
+	public void test_two_numbers_with_other_delimiter() {
+		assertEquals(3, StringCalculator.add("1;2"));
+	}
 
 }
